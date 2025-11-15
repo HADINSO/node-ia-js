@@ -1,8 +1,20 @@
 import express from "express";
 import { OpenRouter } from "@openrouter/sdk";
+import cors from "cors";
 
 const app = express();
 app.use(express.json());
+
+// =======================
+// 🔥 CORS CONFIGURADO
+// =======================
+app.use(
+  cors({
+    origin: "*", // Puedes poner aquí tu dominio: "https://tusitio.com"
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // Configuración directa SIN .env
 const openRouter = new OpenRouter({
