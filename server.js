@@ -18,7 +18,7 @@ app.use(
 
 // Configuración directa SIN .env
 const openRouter = new OpenRouter({
-  apiKey: "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", // <--- pega tu API KEY aquí
+  apiKey: "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", // <--- pega tu API KEY aquí
   defaultHeaders: {
     "HTTP-Referer": "http://localhost:3000",  
     "X-Title": "IA MRV JS", 
